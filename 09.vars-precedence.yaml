@@ -12,5 +12,5 @@
   - name: variables at task level
     vars:
       NAME: kots-tasklevel
-    ansilble.builtin.debug:
+    ansible.builtin.debug:
       msg: "Name is {{NAME}}"
