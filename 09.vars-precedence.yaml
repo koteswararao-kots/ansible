@@ -10,7 +10,7 @@
     private: false
   tasks: 
   - name: variables at task level
-    vars:
-      NAME: kots-tasklevel
+    # vars:
+    #   NAME: kots-tasklevel
     ansible.builtin.debug:
       msg: "Name is {{NAME}}"
