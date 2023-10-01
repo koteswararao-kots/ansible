@@ -3,6 +3,8 @@
 
 [mongodb]
 172.31.41.248
+
+[mongodb:vars]
 NAME=kots-mongodb
 
 [mysql]
