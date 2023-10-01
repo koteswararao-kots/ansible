@@ -1,0 +1,16 @@
+- name: testing variable precedence
+  hosts: mongodb
+  vars: 
+    NAME: kots-playlevel
+  vars_files: 
+    - variables.yaml
+  vars_prompt: 
+  - name: NAME
+    prompt: Enter your name
+    private: false
+  tasks: 
+  - name: variables at task level
+    vars:
+      NAME: kots-tasklevel
+    ansilble.builtin.debug:
+      msg: "Name is {{NAME}}"
