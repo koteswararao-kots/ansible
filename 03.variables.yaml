@@ -1,0 +1,14 @@
+- name: Variables in ansible
+  hosts: mongodb
+  vars:
+    COURSE: devops with aws
+    DURATION: 3 months
+  tasks: 
+  - name: printing hello world
+    ansible.builtin.debug:
+      msg: "Hello world, im koteswar"
+  - name: printing varibales
+    ansible.builtin.debug:
+      msg: "Im learning {{COURSE}}"
+
+
