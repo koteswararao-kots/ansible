@@ -1,0 +1,14 @@
+- name: variables at task level
+  hosts: localhost
+  vars: 
+    NAME: kots
+    COURSE: fullstack
+  tasks: 
+  - name: inherit from play level vars
+    ansible.buitin.debug:   
+      msg: "Hii, myself {{NAME}}, learnt {{COURSE}}"
+  - name: printing task level variables by overriding play level varibles
+    vars: 
+      COURSE: Devops with AWS
+    ansible.builtin.debug: 
+      msg: "Hii, myself {{NAME}}, learning {{COURSE}}"
