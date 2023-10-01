@@ -4,5 +4,5 @@
     - variables.yml
   tasks: 
   - name: printing varaibles
-    ansible.bultin.debug: 
+    ansible.builtin.debug: 
       msg: "im learning {{COURSE}}, duration is {{DURATION}}"
