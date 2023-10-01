@@ -1,7 +1,7 @@
 - name: testing variable precedence
   hosts: mongodb
-  vars: 
-    NAME: kots-playlevel
+  # vars: 
+  #   NAME: kots-playlevel
   # vars_files: 
   #   - variables.yaml
   # vars_prompt: 
