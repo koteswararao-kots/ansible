@@ -5,7 +5,7 @@
     COURSE: fullstack
   tasks: 
   - name: inherit from play level vars
-    ansible.buitin.debug:   
+    ansible.builtin.debug:   
       msg: "Hii, myself {{NAME}}, learnt {{COURSE}}"
   - name: printing task level variables by overriding play level varibles
     vars: 
