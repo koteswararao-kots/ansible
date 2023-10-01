@@ -3,7 +3,7 @@
 
 [mongodb]
 172.31.41.248
-USERNAME: kots-mongodb
+USERNAME=kots-mongodb
 
 [mysql]
 roboshop-us-dev-db-mysql-01.projectdevops.online
