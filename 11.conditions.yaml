@@ -8,13 +8,14 @@
 
     - name: Print the command output
       ansible.builtin.debug:
-        msg: "{{ out.stdout }}"
+        msg: "{{ out }}"
 
     - name: Print exit status
       ansible.builtin.debug:
         msg: "{{ out.rc }}"
 
     - name: Create user
+      become: yes
       ansible.builtin.user:
         name: roboshop
       when: out.rc != 0
