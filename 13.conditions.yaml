@@ -1,0 +1,9 @@
+- name: simple condition example
+  hosts: localhost
+  vars: 
+    NAME: Devops1
+  tasks: 
+  - name: print if name is Devops
+  ansible.builtin.debug: 
+    msg: "Hello {{Name}}"
+  when: Name == Devops1
