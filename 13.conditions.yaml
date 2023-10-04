@@ -5,5 +5,5 @@
   tasks: 
   - name: print if name is Devops
   ansible.builtin.debug: 
-    msg: "Hello {{NamNAMEe}}"
+    msg: "Hello {{NAME}}"
   when: NAME == Devops1
