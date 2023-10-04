@@ -1,17 +1,20 @@
-- name: create user
+- name: Create User
   hosts: localhost
-  tasks: 
-  - name: check roboshop user exist or not
-    ansible.builtin.command: id roboshop 
-    register: out 
-    ignore_erros: true
-  - name: print the command output 
-    ansible.builtin.debug: 
-      mag: "{{out}}"
-  - name: print exit status
-    ansible.builtin.debug: 
-      msg: "{{out.rc}}"
-  - when: out.rc != 0
-    name: create user
-    ansible.builtin.user: 
-      name: roboshop    
+  tasks:
+    - name: Check if roboshop user exists
+      ansible.builtin.command: id roboshop
+      register: out
+      ignore_errors: true
+
+    - name: Print the command output
+      ansible.builtin.debug:
+        msg: "{{ out.stdout }}"
+
+    - name: Print exit status
+      ansible.builtin.debug:
+        msg: "{{ out.rc }}"
+
+    - name: Create user
+      ansible.builtin.user:
+        name: roboshop
+      when: out.rc != 0
