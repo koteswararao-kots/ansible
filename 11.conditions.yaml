@@ -1,12 +1,8 @@
 - name: Create User
   hosts: localhost
-  vars_prompt: 
-  - name: USER
-    prompt: Enter USER TO CREATE
-    private: false
   tasks:
-    - name: Check if {{USER}} user exists
-      ansible.builtin.command: id {{USER}}
+    - name: Check if roboshop user exists
+      ansible.builtin.command: id roboshop
       register: out
       ignore_errors: true
 
